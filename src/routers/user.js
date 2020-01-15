@@ -11,7 +11,7 @@ router.post('/users', async (req, res) => {
 
     try {
         await user.save()
-        sendWelcomeEmail(user.email, user.baseModelName,(err,data) => {
+        sendWelcomeEmail(user.email, user.name,(err,data) => {
             if (err) {
                 console.log(err);
                 
